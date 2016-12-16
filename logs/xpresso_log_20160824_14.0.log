@@ -1,0 +1,145 @@
+20160824_14:30:10.940 [main] INFO  c.a.x.e.c.XpText.preProcess 158 - Normalized Text :	Spoke with Sarah . Her Mom was painting the ceiling in the master closet and triggered the Sprinkler in the closet .
+20160824_14:30:11.071 [main] INFO  c.a.x.e.c.XpText.initialProcess 309 - Annotation completed in 125.0 ms
+20160824_14:30:11.074 [main] INFO  c.a.x.e.c.XpExpression.getEntityOpinionMap 1710 - getTokens duration: 0.0 ms
+20160824_14:30:11.075 [main] INFO  c.a.x.e.c.XpExpression.getEntityOpinionMap 1715 - TokenList:	[spoke, with, sarah]
+20160824_14:30:11.076 [main] INFO  c.a.x.e.c.XpExpression.getEntityOpinionMap 1731 - Dependency Graph:
+root(ROOT-0, Spoke-1)
+case(Sarah-3, with-2)
+nmod:with(Spoke-1, Sarah-3)
+punct(Spoke-1, .-4)
+
+20160824_14:30:11.091 [main] INFO  c.a.x.s.StanfordDependencyGraph.prep_fireRule 1563 - PREP (Case 2.2): Sarah prep_with Spoke
+20160824_14:30:11.092 [main] INFO  c.a.x.s.StanfordDependencyGraph.addToOpinionMap 291 - AddToEntityOpinionMap (1) :	Sarah/NNP	spoke
+20160824_14:30:11.093 [main] INFO  c.a.x.e.i.IntentEngine.genericIntentClassification 112 - IntentAction for Spoke/VBD:	false
+20160824_14:30:11.093 [main] INFO  c.a.x.e.i.IntentEngine.genericIntentClassification 134 - IntentionClassifier (False):	Spoke/VBD	Sarah/NNP
+20160824_14:30:11.093 [main] INFO  c.a.x.s.StanfordDependencyGraph.needClassifier 1823 - NeedClassifier Called:	Spoke/VBD	Sarah/NNP
+20160824_14:30:11.095 [main] INFO  c.a.x.e.s.SentimentEngine.needClassifier 373 - Sentiment From NeedClassifier: null
+20160824_14:30:11.096 [main] INFO  c.a.x.s.StanfordDependencyGraph.getEntityOpinionMap 2157 - Initial EntityOpinionMap:	{Sarah/NNP=[spoke]}
+
+20160824_14:30:11.096 [main] INFO  c.a.x.s.StanfordDependencyGraph.getEntityOpinionMap 2187 - Negated Opinion Map:	{}
+20160824_14:30:11.096 [main] INFO  c.a.x.s.StanfordDependencyGraph.getEntityOpinionMap 2188 - ModifiedOpinion Map:	{}
+20160824_14:30:11.096 [main] INFO  c.a.x.s.StanfordDependencyGraph.getEntityOpinionMap 2189 - MultiWordEntity Map:	{}
+20160824_14:30:11.096 [main] INFO  c.a.x.s.StanfordDependencyGraph.getEntityOpinionMap 2190 - EquivalentEntity Map:	{}
+
+20160824_14:30:11.097 [main] INFO  c.a.x.a.d.DomainKnowledge.getAspect 803 - Aspect Lookup for: sarah
+20160824_14:30:11.097 [main] INFO  c.a.x.a.d.DomainKnowledge.getWholeAspect 689 - Find Aspect For: sarah
+20160824_14:30:11.097 [main] INFO  c.a.x.a.d.DomainKnowledge.getOntologyCategory 206 - GetOntologyCategory called:	sarah	isProperNoun: true	isContainsNonNounPOS: false	isTryEntity: false
+20160824_14:30:11.097 [main] INFO  c.a.x.a.d.DomainKnowledge.getOntologyCategory 223 - NER contains sarah	NULL
+20160824_14:30:11.097 [main] INFO  c.a.x.a.d.DomainKnowledge.validateAndCorrectAspect 641 - ReturnAspect :	sarah	null	null
+20160824_14:30:11.098 [main] INFO  c.a.x.a.d.DomainKnowledge.generateAspectArr 675 - EntityAspect Pair Returned:	sarah	null
+20160824_14:30:11.098 [main] INFO  c.a.x.s.StanfordDependencyGraph.getEntityOpinionMap 2404 - Final EntityOpinion Map:	{sarah=[spoke], Spoke=[Spoke]}
+
+20160824_14:30:11.098 [main] INFO  c.a.x.e.c.XpExpression.getEntityOpinionMap 1710 - getTokens duration: 0.0 ms
+20160824_14:30:11.099 [main] INFO  c.a.x.e.c.XpExpression.getEntityOpinionMap 1715 - TokenList:	[her, mom, was, painting, the, ceiling, in, the, master, closet, and, triggered, the, sprinkler, in, the, closet]
+20160824_14:30:11.099 [main] INFO  c.a.x.e.c.XpExpression.getEntityOpinionMap 1731 - Dependency Graph:
+root(ROOT-0, painting-4)
+nmod:poss(Mom-2, Her-1)
+nsubj(painting-4, Mom-2)
+nsubj(triggered-12, Mom-2)
+aux(painting-4, was-3)
+det(ceiling-6, the-5)
+dobj(painting-4, ceiling-6)
+case(closet-10, in-7)
+det(closet-10, the-8)
+compound(closet-10, master-9)
+nmod:in(ceiling-6, closet-10)
+cc(painting-4, and-11)
+conj:and(painting-4, triggered-12)
+det(Sprinkler-14, the-13)
+dobj(triggered-12, Sprinkler-14)
+case(closet-17, in-15)
+det(closet-17, the-16)
+nmod:in(Sprinkler-14, closet-17)
+punct(painting-4, .-18)
+
+20160824_14:30:11.099 [main] INFO  c.a.x.s.StanfordDependencyGraph.nn_fireRule 1404 - NN: Full Entity of closet is master closet
+20160824_14:30:11.100 [main] INFO  c.a.x.s.StanfordDependencyGraph.addToMultiWordEntityMap 351 - Adding MultiWordEntity closet/NN	master closet
+20160824_14:30:11.100 [main] INFO  c.a.x.s.StanfordDependencyGraph.addToTagSentimentMap 409 - Adding to TagSentimentMap:	master closet	POS
+20160824_14:30:11.100 [main] INFO  c.a.x.s.StanfordDependencyGraph.nn_fireRule 1430 - NN: Sentiment Tag of master closet :	POS
+20160824_14:30:11.100 [main] INFO  c.a.x.a.d.DomainKnowledge.getAspect 803 - Aspect Lookup for: master closet
+20160824_14:30:11.100 [main] INFO  c.a.x.a.d.DomainKnowledge.getWholeAspect 689 - Find Aspect For: master closet
+20160824_14:30:11.100 [main] INFO  c.a.x.a.d.DomainKnowledge.getOntologyCategory 206 - GetOntologyCategory called:	master closet	isProperNoun: false	isContainsNonNounPOS: false	isTryEntity: true
+20160824_14:30:11.103 [main] INFO  c.a.x.a.w.WordVectorBottomUp.predictCategories 330 - entityStr: master closet entityStrLemma: master closet
+20160824_14:30:11.108 [main] INFO  c.a.x.a.w.WordVectorBottomUp.predictCategories 332 - WordVector BottomUp predictCategories entityStr:master closet	entityStrLemma: master closet	isTryEntity: true	isEntityVectorNull: false
+20160824_14:30:11.701 [main] INFO  c.a.x.a.w.WordVectorBottomUp.predictCategories 359 - WordVector BottomUp Category (Match Case: 2) isTryEntity: true	(First Match): master closet	BATHROOM	FirstMaxSimilarity: 0.5972474054902082
+20160824_14:30:11.701 [main] INFO  c.a.x.a.w.WordVectorBottomUp.getCategory 310 - WordVector BottomUp Category (Match Case: 2): master closet	[BATHROOM]
+20160824_14:30:11.701 [main] INFO  c.a.x.a.d.DomainKnowledge.validateAndCorrectAspect 641 - ReturnAspect :	master closet	BATHROOM	BATHROOM
+20160824_14:30:11.701 [main] INFO  c.a.x.a.d.DomainKnowledge.getWholeAspect 765 - Aspect Match (Case2: Direct Match): master closet
+20160824_14:30:11.701 [main] INFO  c.a.x.a.d.DomainKnowledge.generateAspectArr 675 - EntityAspect Pair Returned:	master closet	BATHROOM
+20160824_14:30:11.702 [main] INFO  c.a.x.s.StanfordDependencyGraph.addToTagAspectMap 416 - Adding to TagAspectMap:	master closet	[master closet, BATHROOM]
+20160824_14:30:11.702 [main] INFO  c.a.x.s.StanfordDependencyGraph.nsubj_fireRule 1973 - NSUBJ: Mom/NN nsubj painting/VBG
+20160824_14:30:11.704 [main] INFO  c.a.x.s.StanfordDependencyGraph.addToOpinionMap 291 - AddToEntityOpinionMap (1) :	Mom/NN	painting
+20160824_14:30:11.704 [main] INFO  c.a.x.a.d.DomainKnowledge.getAspect 803 - Aspect Lookup for: mom
+20160824_14:30:11.704 [main] INFO  c.a.x.a.d.DomainKnowledge.getWholeAspect 689 - Find Aspect For: mom
+20160824_14:30:11.704 [main] INFO  c.a.x.a.d.DomainKnowledge.getOntologyCategory 206 - GetOntologyCategory called:	mom	isProperNoun: false	isContainsNonNounPOS: false	isTryEntity: false
+20160824_14:30:11.705 [main] INFO  c.a.x.a.w.WordVectorBottomUp.getCategory 310 - WordVector BottomUp Category (Match Case: 1): mom	[RELATIONSHIP]
+20160824_14:30:11.706 [main] INFO  c.a.x.a.d.DomainKnowledge.validateAndCorrectAspect 641 - ReturnAspect :	mom	RELATIONSHIP	RELATIONSHIP
+20160824_14:30:11.706 [main] INFO  c.a.x.a.d.DomainKnowledge.getWholeAspect 765 - Aspect Match (Case2: Direct Match): mom
+20160824_14:30:11.706 [main] INFO  c.a.x.a.d.DomainKnowledge.generateAspectArr 675 - EntityAspect Pair Returned:	mom	RELATIONSHIP
+20160824_14:30:11.706 [main] INFO  c.a.x.s.StanfordDependencyGraph.addToTagAspectMap 416 - Adding to TagAspectMap:	mom	[mom, RELATIONSHIP]
+20160824_14:30:11.706 [main] INFO  c.a.x.a.d.DomainKnowledge.getOntologyCategory 206 - GetOntologyCategory called:	mom	isProperNoun: false	isContainsNonNounPOS: false	isTryEntity: false
+20160824_14:30:11.707 [main] INFO  c.a.x.a.w.WordVectorBottomUp.getCategory 310 - WordVector BottomUp Category (Match Case: 1): mom	[RELATIONSHIP]
+20160824_14:30:11.707 [main] INFO  c.a.x.e.s.SentimentEngine.nsubjBasedSentimentClassifier 229 - Direct Aspect: RELATIONSHIP
+20160824_14:30:11.707 [main] INFO  c.a.x.s.StanfordDependencyGraph.nsubj_fireRule 1973 - NSUBJ: Mom/NN nsubj triggered/VBD
+20160824_14:30:11.707 [main] INFO  c.a.x.s.StanfordDependencyGraph.addToOpinionMap 291 - AddToEntityOpinionMap (1) :	Mom/NN	triggered
+20160824_14:30:11.708 [main] INFO  c.a.x.a.d.DomainKnowledge.getAspect 803 - Aspect Lookup for: mom
+20160824_14:30:11.708 [main] INFO  c.a.x.a.d.DomainKnowledge.getWholeAspect 689 - Find Aspect For: mom
+20160824_14:30:11.708 [main] INFO  c.a.x.a.d.DomainKnowledge.getWholeAspect 703 - Aspect Match (Case1.1: TagAspectMap): mom	[mom, RELATIONSHIP]
+20160824_14:30:11.708 [main] INFO  c.a.x.s.StanfordDependencyGraph.addToTagAspectMap 416 - Adding to TagAspectMap:	mom	[mom, RELATIONSHIP]
+20160824_14:30:11.708 [main] INFO  c.a.x.a.d.DomainKnowledge.getOntologyCategory 206 - GetOntologyCategory called:	mom	isProperNoun: false	isContainsNonNounPOS: false	isTryEntity: false
+20160824_14:30:11.708 [main] INFO  c.a.x.a.w.WordVectorBottomUp.getCategory 310 - WordVector BottomUp Category (Match Case: 1): mom	[RELATIONSHIP]
+20160824_14:30:11.708 [main] INFO  c.a.x.e.s.SentimentEngine.nsubjBasedSentimentClassifier 229 - Direct Aspect: RELATIONSHIP
+20160824_14:30:11.709 [main] INFO  c.a.x.s.StanfordDependencyGraph.dobj_fireRule 1189 - DOBJ: ceiling is qualified by painting
+20160824_14:30:11.710 [main] INFO  c.a.x.e.i.IntentEngine.genericIntentClassification 112 - IntentAction for painting/VBG:	false
+20160824_14:30:11.710 [main] INFO  c.a.x.e.i.IntentEngine.genericIntentClassification 134 - IntentionClassifier (False):	painting/VBG	ceiling/NN
+20160824_14:30:11.710 [main] INFO  c.a.x.s.StanfordDependencyGraph.addToOpinionMap 291 - AddToEntityOpinionMap (1) :	ceiling/NN	painting
+20160824_14:30:11.710 [main] INFO  c.a.x.s.StanfordDependencyGraph.needClassifier 1823 - NeedClassifier Called:	painting/VBG	ceiling/NN
+20160824_14:30:11.710 [main] INFO  c.a.x.e.s.SentimentEngine.needClassifier 373 - Sentiment From NeedClassifier: null
+20160824_14:30:11.710 [main] INFO  c.a.x.e.s.SentimentEngine.possessionClassifier 384 - Possession classifer govWord : painting depWord : ceiling
+20160824_14:30:11.711 [main] INFO  c.a.x.s.StanfordDependencyGraph.dobj_fireRule 1189 - DOBJ: Sprinkler is qualified by triggered
+20160824_14:30:11.711 [main] INFO  c.a.x.e.i.IntentEngine.genericIntentClassification 112 - IntentAction for triggered/VBD:	false
+20160824_14:30:11.711 [main] INFO  c.a.x.e.i.IntentEngine.genericIntentClassification 134 - IntentionClassifier (False):	triggered/VBD	Sprinkler/NN
+20160824_14:30:11.711 [main] INFO  c.a.x.s.StanfordDependencyGraph.addToOpinionMap 291 - AddToEntityOpinionMap (1) :	Sprinkler/NN	triggered
+20160824_14:30:11.712 [main] INFO  c.a.x.s.StanfordDependencyGraph.needClassifier 1823 - NeedClassifier Called:	triggered/VBD	Sprinkler/NN
+20160824_14:30:11.712 [main] INFO  c.a.x.e.s.SentimentEngine.needClassifier 373 - Sentiment From NeedClassifier: null
+20160824_14:30:11.712 [main] INFO  c.a.x.e.s.SentimentEngine.possessionClassifier 384 - Possession classifer govWord : triggered depWord : sprinkler
+20160824_14:30:11.712 [main] INFO  c.a.x.s.StanfordDependencyGraph.prep_fireRule 1563 - PREP (Case 2.2): closet prep_in ceiling
+20160824_14:30:11.713 [main] INFO  c.a.x.s.StanfordDependencyGraph.addToOpinionMap 291 - AddToEntityOpinionMap (1) :	closet/NN	ceiling
+20160824_14:30:11.713 [main] INFO  c.a.x.e.i.IntentEngine.genericIntentClassification 112 - IntentAction for ceiling/NN:	false
+20160824_14:30:11.713 [main] INFO  c.a.x.e.i.IntentEngine.genericIntentClassification 134 - IntentionClassifier (False):	ceiling/NN	closet/NN
+20160824_14:30:11.713 [main] INFO  c.a.x.s.StanfordDependencyGraph.needClassifier 1823 - NeedClassifier Called:	ceiling/NN	closet/NN
+20160824_14:30:11.713 [main] INFO  c.a.x.e.s.SentimentEngine.needClassifier 373 - Sentiment From NeedClassifier: null
+20160824_14:30:11.713 [main] INFO  c.a.x.s.StanfordDependencyGraph.prep_fireRule 1563 - PREP (Case 2.2): closet prep_in Sprinkler
+20160824_14:30:11.714 [main] INFO  c.a.x.s.StanfordDependencyGraph.addToOpinionMap 291 - AddToEntityOpinionMap (1) :	closet/NN	sprinkler
+20160824_14:30:11.714 [main] INFO  c.a.x.e.i.IntentEngine.genericIntentClassification 112 - IntentAction for Sprinkler/NN:	false
+20160824_14:30:11.714 [main] INFO  c.a.x.e.i.IntentEngine.genericIntentClassification 134 - IntentionClassifier (False):	Sprinkler/NN	closet/NN
+20160824_14:30:11.714 [main] INFO  c.a.x.s.StanfordDependencyGraph.needClassifier 1823 - NeedClassifier Called:	Sprinkler/NN	closet/NN
+20160824_14:30:11.714 [main] INFO  c.a.x.e.s.SentimentEngine.needClassifier 373 - Sentiment From NeedClassifier: null
+20160824_14:30:11.714 [main] INFO  c.a.x.s.StanfordDependencyGraph.getEntityOpinionMap 2157 - Initial EntityOpinionMap:	{ceiling/NN=[painting], closet/NN=[ceiling], Sprinkler/NN=[triggered], closet/NN=[sprinkler], Mom/NN=[painting, triggered]}
+
+20160824_14:30:11.714 [main] INFO  c.a.x.s.StanfordDependencyGraph.getEntityOpinionMap 2187 - Negated Opinion Map:	{}
+20160824_14:30:11.715 [main] INFO  c.a.x.s.StanfordDependencyGraph.getEntityOpinionMap 2188 - ModifiedOpinion Map:	{}
+20160824_14:30:11.715 [main] INFO  c.a.x.s.StanfordDependencyGraph.getEntityOpinionMap 2189 - MultiWordEntity Map:	{closet/NN=master closet}
+20160824_14:30:11.715 [main] INFO  c.a.x.s.StanfordDependencyGraph.getEntityOpinionMap 2190 - EquivalentEntity Map:	{}
+
+20160824_14:30:11.715 [main] INFO  c.a.x.a.d.DomainKnowledge.getAspect 803 - Aspect Lookup for: ceiling
+20160824_14:30:11.715 [main] INFO  c.a.x.a.d.DomainKnowledge.getWholeAspect 689 - Find Aspect For: ceiling
+20160824_14:30:11.715 [main] INFO  c.a.x.a.d.DomainKnowledge.getOntologyCategory 206 - GetOntologyCategory called:	ceiling	isProperNoun: false	isContainsNonNounPOS: false	isTryEntity: false
+20160824_14:30:11.716 [main] INFO  c.a.x.a.w.WordVectorBottomUp.getCategory 310 - WordVector BottomUp Category (Match Case: 1): ceiling	[LAYOUT]
+20160824_14:30:11.716 [main] INFO  c.a.x.a.d.DomainKnowledge.validateAndCorrectAspect 641 - ReturnAspect :	ceiling	LAYOUT	LAYOUT
+20160824_14:30:11.716 [main] INFO  c.a.x.a.d.DomainKnowledge.getWholeAspect 765 - Aspect Match (Case2: Direct Match): ceiling
+20160824_14:30:11.717 [main] INFO  c.a.x.a.d.DomainKnowledge.generateAspectArr 675 - EntityAspect Pair Returned:	ceiling	LAYOUT
+20160824_14:30:11.717 [main] INFO  c.a.x.a.d.DomainKnowledge.getAspect 803 - Aspect Lookup for: closet
+20160824_14:30:11.717 [main] INFO  c.a.x.a.d.DomainKnowledge.getWholeAspect 689 - Find Aspect For: closet
+20160824_14:30:11.717 [main] INFO  c.a.x.a.d.DomainKnowledge.getOntologyCategory 206 - GetOntologyCategory called:	closet	isProperNoun: false	isContainsNonNounPOS: false	isTryEntity: false
+20160824_14:30:11.718 [main] INFO  c.a.x.a.w.WordVectorBottomUp.getCategory 310 - WordVector BottomUp Category (Match Case: 1): closet	[BATHROOM]
+20160824_14:30:11.718 [main] INFO  c.a.x.a.d.DomainKnowledge.validateAndCorrectAspect 641 - ReturnAspect :	closet	BATHROOM	BATHROOM
+20160824_14:30:11.718 [main] INFO  c.a.x.a.d.DomainKnowledge.getWholeAspect 765 - Aspect Match (Case2: Direct Match): closet
+20160824_14:30:11.718 [main] INFO  c.a.x.a.d.DomainKnowledge.generateAspectArr 675 - EntityAspect Pair Returned:	closet	BATHROOM
+20160824_14:30:11.718 [main] INFO  c.a.x.a.d.DomainKnowledge.getAspect 803 - Aspect Lookup for: master closet
+20160824_14:30:11.719 [main] INFO  c.a.x.a.d.DomainKnowledge.getWholeAspect 689 - Find Aspect For: master closet
+20160824_14:30:11.719 [main] INFO  c.a.x.a.d.DomainKnowledge.getWholeAspect 703 - Aspect Match (Case1.1: TagAspectMap): master closet	[master closet, BATHROOM]
+20160824_14:30:11.719 [main] INFO  c.a.x.a.d.DomainKnowledge.getAspect 803 - Aspect Lookup for: sprinkler
+20160824_14:30:11.719 [main] INFO  c.a.x.a.d.DomainKnowledge.getWholeAspect 689 - Find Aspect For: sprinkler
+20160824_14:30:11.719 [main] INFO  c.a.x.a.d.DomainKnowledge.getOntologyCategory 206 - GetOntologyCategory called:	sprinkler	isProperNoun: false	isContainsNonNounPOS: false	isTryEntity: false
+20160824_14:30:11.720 [main] INFO  c.a.x.a.w.WordVectorBottomUp.predictCategories 330 - entityStr: sprinkler entityStrLemma: sprinkler

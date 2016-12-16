@@ -1,0 +1,14 @@
+Granular Aspects,Damage
+AMBIANCE,foul smell
+BODY PARTS,body injury
+CUTTING METHODS,property damage
+EROSION,property damage
+HOSPITAL,body injury
+HOSPITAL STAFF,body injury
+HOSPITALITY FACILITIES,body injury
+ODOR,foul smell
+WATER INCIDENT,property damage
+MEDICAL CONDITION,body injury
+DAMAGE,property damage
+PHYSICAL DAMAGE,property damage
+INJURY,body injury

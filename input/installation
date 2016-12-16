@@ -1,0 +1,16 @@
+git-1
+maven-1
+java-1
+docker-
+eclipse-1
+citrus receiver-1
+Xpresso-1
+mongo-1
+m2e plugin for eclipse-1
+curl-1
+perl-1
+mysql -> user:root password :root
+sublime -
+	sudo add-apt-repository ppa:webupd8team/sublime-text-3
+	sudo apt-get update
+	sudo apt-get install sublime-text-installer
