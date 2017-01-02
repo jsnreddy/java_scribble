@@ -1,6 +1,0 @@
-public class Test{
-	public void main(String [] args) {
-		System.out.println("my name is sumit");
-		System.out.println("my surname das");
-	}
-}
