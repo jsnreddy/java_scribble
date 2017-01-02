@@ -173,7 +173,7 @@ public class NLPengine {
 		try {
 			pipeline.annotate(doc);
 		} catch (NullPointerException e) {
-			Set<String> personNamesSet = new HashSet<>(Arrays.asList("Null_Error"));
+			Set<String> personNamesSet = new HashSet<String>(Arrays.asList("Null_Error"));
 			return personNamesSet;
 		}
 
@@ -212,7 +212,7 @@ public class NLPengine {
 
 			}
 		}
-		Set<String> personNamesSet = new HashSet<>();
+		Set<String> personNamesSet = new HashSet<String>();
 		personNamesSet.addAll(personNames);
 		//	    for(String str:personNamesSet){
 		//	    	  System.out.println(str);
