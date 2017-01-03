@@ -2,7 +2,6 @@ package com.jsn.test;
 
 import java.util.Scanner;
 
-import com.abzooba.xpresso.customer.equian.WordVectorCategories;
 import com.abzooba.xpresso.engine.core.XpEngine;
 
 public class EquianTest {
@@ -16,7 +15,7 @@ public class EquianTest {
 		Scanner reader = new Scanner(System.in);
 		review = reader.nextLine();
 
-		System.out.println(WordVectorCategories.getDocVector(review));
+		//		System.out.println(WordVectorCategories.getDocVector(review));
 	}
 
 }
