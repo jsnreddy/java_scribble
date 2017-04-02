@@ -178,7 +178,7 @@ public class RestApiCall {
 			//			JSONObject xpResponse = new JSONObject(jsonString);
 
 			System.out.println(jsonString);
-			if (jsonString == "") {
+			if (jsonString.equals("")) {
 				return new JSONObject("{}");
 			} else {
 				return new JSONObject(jsonString);

@@ -84,10 +84,11 @@ public class App<T> {
 				//				EmailCat = (List<T>) java.util.Arrays.asList(EnumValues.RCSupplierEmailCategories.values());
 				//				System.out.println(EmailCat);
 
-			} else if (cat1.equalsIgnoreCase("sc")) {
-				//				EmailCat = (List<T>) java.util.Arrays.asList(EnumValues.MerchantEmailCategories.values());
-				//				System.out.println(EmailCat);
-			}
+			} 
+//			else if (cat1.equalsIgnoreCase("sc")) {
+//				//				EmailCat = (List<T>) java.util.Arrays.asList(EnumValues.MerchantEmailCategories.values());
+//				//				System.out.println(EmailCat);
+//			}
 		} else if (cat2.equalsIgnoreCase("merchant")) {
 			if (MerchantEmailCategories.contains(emailCat.toString())) {
 				//				System.out.println(MerchantEmailCategories.get(MerchantEmailCategories.size() - 1));
