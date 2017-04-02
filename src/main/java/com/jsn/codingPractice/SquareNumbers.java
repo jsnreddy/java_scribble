@@ -1,4 +1,4 @@
-package com.jsn.test;
+package com.jsn.codingPractice;
 
 import java.util.Scanner;
 

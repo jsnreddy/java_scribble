@@ -1,0 +1,5 @@
+apples
+bananas
+salad
+mushrooms
+cheese
