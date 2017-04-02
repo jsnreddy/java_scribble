@@ -101,10 +101,10 @@ public class RegexMatch {
 		//		System.out.println("value: " + value);
 		//		//System.out.println("test: " + test);
 
-		String entityStr = "Back home! On both days at #ASEM, we awoke to shocking news - the terror attack in Nice and attempted coup in Turkey. Both resulted in many lives lost. A stark reminder of a troubled world, and why in Singapore we must stay united and look out for one another. Our MFA is watching the situation in Turkey closely. For overseas Singaporeans, wherever you may be, please e-register with MFA (https://eregister.mfa.gov.sg/) and stay safe. LHL";
-		entityStr = "called insured / / informed him about process / / will talk again on monday";
-		entityStr = readFile();
-		System.out.println("original : " + entityStr);
+		//		String entityStr = "Back home! On both days at #ASEM, we awoke to shocking news - the terror attack in Nice and attempted coup in Turkey. Both resulted in many lives lost. A stark reminder of a troubled world, and why in Singapore we must stay united and look out for one another. Our MFA is watching the situation in Turkey closely. For overseas Singaporeans, wherever you may be, please e-register with MFA (https://eregister.mfa.gov.sg/) and stay safe. LHL";
+		//		entityStr = "called insured / / informed him about process / / will talk again on monday";
+		//		entityStr = readFile();
+		//		System.out.println("original : " + entityStr);
 		//		entityStr = entityStr.toLowerCase().trim();
 		//		System.out.println("1 " + entityStr);
 		//		entityStr = entityStr.replaceAll("\b(jan(uary)?|feb(ruary)?|mar(ch)?|apr(il)?|may|jun(e)?|jul(y)?|aug(ust)?|sep(tember)?|oct(ober)?|nov(ember)?|dec(ember)?)\b", "");
@@ -116,11 +116,25 @@ public class RegexMatch {
 		//		//		entityStr = entityStr.replaceAll("[^\\w\\s\\-]", "");
 		//		//		System.out.println("5 " + entityStr);
 		//		entityStr = entityStr.trim();
-		entityStr = entityStr.replaceAll("/\\s*/", ".");
-		System.out.println("final : " + entityStr);
-		if (entityStr.isEmpty() || entityStr.equals("")) {
-			System.out.println("empty string");
-		}
+		//		entityStr = entityStr.replaceAll("/\\s*/", ".");
+		//		System.out.println("final : " + entityStr);
+		//		if (entityStr.isEmpty() || entityStr.equals("")) {
+		//			System.out.println("empty string");
+		//		}
+
+		String regex = "[^A-Za-z0-9]";
+		String word1 = "abcd";
+		String word2 = "(\"\'\\}";
+
+		word1 = word1.replaceAll(regex, "");
+		word2 = word2.replaceAll(regex, "");
+
+		System.out.println(word1);
+		System.out.println(word2);
+
+		word2.replaceAll("abcd", "");
+
+		System.out.println("word2 : " + word2);
 
 	}
 

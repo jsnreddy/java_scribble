@@ -26,14 +26,17 @@ public class RestApiCall {
 	//	private static final String TEST_CASES_FILE = "hdfc-sample.tsv";
 	//	private static final String TEST_CASES_FILE = "/home/abzooba/work/workspace/test/Untitled spreadsheet - Sheet4.tsv";
 
-	private static final String URL_LINK = "http://localhost:9090/abzooba/engine/result/";
+	private static final String URL_LINK = "http://exp.xpresso.abzooba.com:9091/abzooba/engine/mongo/";
 	private static final Integer ID_FIELD = 0;//0;
 	private static final Integer REVIEW_FIELD = 7;//0;
 	private static final Integer SOURCE_FIELD = null;//0;
 	private static final String DELIMITER = "#&#abz#&#";
 	private static final String DOMAIN = "government";
 	private static final String SOURCE = "assorted";
-	private static final String ANNOTATION = "expr_trend";
+	private static final String ANNOTATION = "senti";
+
+	private static final boolean hist = false;
+	private static final boolean trend = false;
 
 	private static SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
 	private static String CURRENT_DATE_STR = sdf.format(Calendar.getInstance().getTime());
@@ -71,8 +74,7 @@ public class RestApiCall {
 		//		String annotation = "expr_trend";
 		//		String domain_name = "government"; /* can be left null, if the need is so */
 		//		String subject = null; /* can be left null */
-		boolean hist = true;
-		boolean trend = true;
+
 		StringBuilder requestQuery = new StringBuilder("apikey=" + api_key + DELIMITER + "apisecret=" + api_secret + DELIMITER + "annotation=" + ANNOTATION);
 		//		StringBuilder requestQuery = new StringBuilder("annotation=" + ANNOTATION);
 		if (DOMAIN != null) {
@@ -339,12 +341,23 @@ public class RestApiCall {
 
 	}
 
-	public static void main(String[] args) throws FileNotFoundException {
-		// TODO Auto-generated method stub
+	/**
+	 * 
+	 */
+	private static void runMongoInteractive() {
+		String q = "language=en#&#abz#&#domain=government#&#abz#&#annotation=search#&#abz#&#entity=bus#&#abz#&#aspect=bus";
+		StringBuilder requestQuery = new StringBuilder(q);
+		JSONObject output = getXpressoOutput(requestQuery);
+		System.out.println("Mongo Output : " + output.toString());
+	}
 
-		runBatch();
+	public static void main(String[] args) throws FileNotFoundException {
+
+		//		runBatch();
 		//		runXPInteractive();
 		//		runWalmartInteractive();
+		runMongoInteractive();
+
 	}
 
 }
